@@ -1,14 +1,9 @@
 import PropTypes from "prop-types";
-// import { useEffect } from "react";
 import "./FaceRecognition.css";
 
 const FaceRecognition = ({ imageUrl, box }) => {
-   // useEffect(() => {
-   //   console.log("Updated Box:", box);
-   // }, [box]); // Log whenever box updates
- 
    if (!imageUrl) return null;
- 
+
    return (
      <div className="center displayImage">
        <div className="image-container">
@@ -18,37 +13,41 @@ const FaceRecognition = ({ imageUrl, box }) => {
            className="face-recognition-image"
            id="inputImage"
          />
-         {box.topRow !== undefined && (
-           <div
-             className="bounding-box"
-             style={{
-               top: `${box.topRow}px`,
-               left: `${box.leftCol}px`,
-               width: `${box.rightCol - box.leftCol}px`,
-               height: `${box.bottomRow - box.topRow}px`,
-             }}
-           ></div>
-         )}
+         {box.length > 0 &&
+           box.map((face, index) => (
+             <div
+               key={index}
+               className="bounding-box"
+               style={{
+                 top: `${face.topRow}px`,
+                 left: `${face.leftCol}px`,
+                 width: `${face.rightCol - face.leftCol}px`,
+                 height: `${face.bottomRow - face.topRow}px`,
+               }}
+             ></div>
+           ))}
        </div>
      </div>
    );
- };
+};
 
 // Define default props
 FaceRecognition.defaultProps = {
 	imageUrl: null,
-	box: {},
+	box: [],
 };
 
 // Define prop types
 FaceRecognition.propTypes = {
 	imageUrl: PropTypes.string,
-	box: PropTypes.shape({
-		topRow: PropTypes.number,
-		leftCol: PropTypes.number,
-		rightCol: PropTypes.number,
-		bottomRow: PropTypes.number,
-	}),
+	box: PropTypes.arrayOf(
+		PropTypes.shape({
+			topRow: PropTypes.number.isRequired,
+			leftCol: PropTypes.number.isRequired,
+			rightCol: PropTypes.number.isRequired,
+			bottomRow: PropTypes.number.isRequired,
+		})
+	),
 };
 
 export default FaceRecognition;

@@ -27,19 +27,23 @@ const App = () => {
 	};
 
   const calculateFaceLocation = (data) => {
-		const clarifaiFace = data.outputs[0]?.data?.regions[0]?.region_info?.bounding_box;
-		if (!clarifaiFace) return {};
+    const regions = data.outputs[0]?.data?.regions;
+		if (!regions) return [];
 
 		const image = document.getElementById("inputImage");
 		const width = image?.width || 0;
 		const height = image?.height || 0;
 
-		return {
-			leftCol: clarifaiFace.left_col * width,
-			topRow: clarifaiFace.top_row * height,
-			rightCol: clarifaiFace.right_col * width,
-			bottomRow: clarifaiFace.bottom_row * height,
-		};
+    return regions.map((region) => {
+			const clarifaiFace = region.region_info.bounding_box;
+
+			return {
+				leftCol: clarifaiFace.left_col * width,
+				topRow: clarifaiFace.top_row * height,
+				rightCol: clarifaiFace.right_col * width,
+				bottomRow: clarifaiFace.bottom_row * height,
+			};
+		});
 	};
 
 	const displayFaceBox = (box) => {
