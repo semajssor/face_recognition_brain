@@ -26,42 +26,48 @@ const App = () => {
 		setInput(event.target.value);
 	};
 
-	const calculateFaceLocation = (data) => {
-		const regions = data.outputs[0]?.data?.regions || [];
-		const boundingBoxes = regions.map((region) => {
-			const boundingBox = region.region_info.bounding_box;
-			return {
-				topRow: boundingBox.top_row.toFixed(3),
-				leftCol: boundingBox.left_col.toFixed(3),
-				bottomRow: boundingBox.bottom_row.toFixed(3),
-				rightCol: boundingBox.right_col.toFixed(3),
-			};
-		});
-		return boundingBoxes[0];
+  const calculateFaceLocation = (data) => {
+		const clarifaiFace = data.outputs[0]?.data?.regions[0]?.region_info?.bounding_box;
+		if (!clarifaiFace) return {};
+
+		const image = document.getElementById("inputImage");
+		const width = image?.width || 0;
+		const height = image?.height || 0;
+
+		return {
+			leftCol: clarifaiFace.left_col * width,
+			topRow: clarifaiFace.top_row * height,
+			rightCol: clarifaiFace.right_col * width,
+			bottomRow: clarifaiFace.bottom_row * height,
+		};
+	};
+
+	const displayFaceBox = (box) => {
+		// console.log(box);
+		setBox(box);
 	};
 
 	const onButtonSubmit = () => {
-    if (!input.trim()) return;
-  
-    setInput(""); // Clear the input field immediately
-    setImageUrl(input); // Set the image URL
-  
-    fetch("http://localhost:5001/api/clarifai", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ imageUrl: input }),
-    })
-      .then((response) => response.json())
-      .then((result) => {
-        if (result.outputs) {
-          const faceBox = calculateFaceLocation(result);
-          setBox(faceBox);
-        }
-      })
-      .catch((error) => console.log("error", error));
-  };
+		if (!input.trim()) return;
+
+		setImageUrl(input);
+		setInput("");
+
+		fetch("http://localhost:5001/api/clarifai", {
+			method: "POST",
+			headers: {
+				"Content-Type": "application/json",
+			},
+			body: JSON.stringify({ imageUrl: input }),
+		})
+			.then((response) => response.json())
+			.then((result) => {
+				if (result.outputs) {
+					displayFaceBox(calculateFaceLocation(result));
+				}
+			})
+			.catch((error) => console.log("error", error));
+	};
 
 	return (
 		<div className="App">
