@@ -29,7 +29,9 @@ const Register = ({ onRouteChange }) => {
                         className="pa2 ba bg-light-gray o-80 hover-o-100 w-100 br3 pointer"
                         type="text"
                         name="first-name"
-                        id="fname" />
+                        id="fname"
+                        // required
+                     />
                   </div>
                   <div className="mt3">
                      <label
