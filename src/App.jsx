@@ -9,6 +9,8 @@ import Rank from "./components/Rank/Rank";
 import FaceRecognition from "./components/FaceRecognition/FaceRecognition";
 import Signin from "./components/Signin/Signin";
 import Register from "./components/Register/Register";
+// import { FileText } from "lucide-react";
+// import { response } from "express";
 
 const App = () => {
 	const [input, setInput] = useState("");
@@ -23,6 +25,13 @@ const App = () => {
 		entries: 0,
 		joined: "",
 	});
+
+	// useEffect(() => {
+	// 	fetch('http://localhost:3000')
+	// 		.then(response => response.json())
+	// 		.then(data => console.log(data))
+	// 		.catch(err => console.error("Error fetching initial data: ", err))
+	// }, [])
 
 	const onInputChange = (event) => {
 		setInput(event.target.value);
@@ -57,7 +66,6 @@ const App = () => {
 		if (!input.trim()) return;
 
 		setImageUrl(input);
-		setInput("");
 
 		fetch("http://localhost:5001/api/clarifai", {
 			method: "POST",
@@ -71,6 +79,7 @@ const App = () => {
 				if (result.outputs) {
 					displayFaceBox(calculateFaceLocation(result));
 				}
+				setInput("");
 			})
 			.catch((error) => console.log("error", error));
 	};
