@@ -9,7 +9,7 @@ app.use(express.json());
 
 app.use(cors());
 
-app.post("/api/clarifai", async (req, res) => {
+app.put("/api/clarifai", async (req, res) => {
 	const { imageUrl } = req.body;
 
 	const PAT = "f9aa68c5abf54110aacecc743c0c49c8";
@@ -35,7 +35,7 @@ app.post("/api/clarifai", async (req, res) => {
 	});
 
 	const requestOptions = {
-		method: "POST",
+		method: "PUT",
 		headers: {
 			Accept: "application/json",
 			Authorization: "Key " + PAT,
@@ -57,6 +57,8 @@ app.post("/api/clarifai", async (req, res) => {
 		res.status(500).json({ error: "An error occurred while processing the request" });
 	}
 });
+
+
 
 app.listen(PORT, () => {
 	console.log(`Proxy server is running on http://localhost:${PORT}`);

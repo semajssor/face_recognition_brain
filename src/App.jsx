@@ -26,12 +26,15 @@ const App = () => {
 		joined: "",
 	});
 
-	// useEffect(() => {
-	// 	fetch('http://localhost:3000')
-	// 		.then(response => response.json())
-	// 		.then(data => console.log(data))
-	// 		.catch(err => console.error("Error fetching initial data: ", err))
-	// }, [])
+	const loadUser = (data) => {
+		setUser({
+			id: data.id,
+			name: data.name,
+			email: data.email,
+			entries: data.entries,
+			joined: data.joined,
+		});
+	};
 
 	const onInputChange = (event) => {
 		setInput(event.target.value);
@@ -39,27 +42,26 @@ const App = () => {
 
 	const calculateFaceLocation = (data) => {
 		const regions = data.outputs[0]?.data?.regions;
-		if (!regions) return [];
-
+		if (!regions) return []; // Return an empty array if no regions are found
+	 
 		const image = document.getElementById("inputImage");
 		const width = image?.width || 0;
 		const height = image?.height || 0;
-
+	 
 		return regions.map((region) => {
-			const clarifaiFace = region.region_info.bounding_box;
-
-			return {
-				leftCol: clarifaiFace.left_col * width,
-				topRow: clarifaiFace.top_row * height,
-				rightCol: clarifaiFace.right_col * width,
-				bottomRow: clarifaiFace.bottom_row * height,
-			};
+		  const clarifaiFace = region.region_info.bounding_box;
+	 
+		  return {
+			 leftCol: clarifaiFace.left_col * width,
+			 topRow: clarifaiFace.top_row * height,
+			 rightCol: clarifaiFace.right_col * width,
+			 bottomRow: clarifaiFace.bottom_row * height,
+		  };
 		});
-	};
+	 };
 
-	const displayFaceBox = (box) => {
-		// console.log(box);
-		setBox(box);
+	const displayFaceBox = (boxes) => {
+		setBox(boxes);
 	};
 
 	const onButtonSubmit = () => {
@@ -67,12 +69,12 @@ const App = () => {
 
 		setImageUrl(input);
 
-		fetch("http://localhost:5001/api/clarifai", {
+		fetch("http://localhost:3000/api/clarifai", {
 			method: "POST",
 			headers: {
 				"Content-Type": "application/json",
 			},
-			body: JSON.stringify({ imageUrl: input }),
+			body: JSON.stringify({ imageUrl: input, id: user.id }),
 		})
 			.then((response) => response.json())
 			.then((result) => {
@@ -103,7 +105,7 @@ const App = () => {
 	return (
 		<div className="App">
 			<ParticlesBg type="cobweb" bg={true} color="#efefef" className="particules" />
-			<Navigation onRouteChange={onRouteChange} isSignIn={isSignedIn}/>
+			<Navigation onRouteChange={onRouteChange} isSignIn={isSignedIn} />
 			{route === "home" ? (
 				<div className="mt5">
 					<Rank name={user.name} entries={user.entries} />
@@ -111,7 +113,7 @@ const App = () => {
 					<FaceRecognition box={box} imageUrl={imageUrl} />
 				</div>
 			) : route === "signin" ? (
-				<Signin onRouteChange={onRouteChange} />
+				<Signin loadUser={loadUser} onRouteChange={onRouteChange} />
 			) : (
 				<Register onRouteChange={onRouteChange} />
 			)}
