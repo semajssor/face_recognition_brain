@@ -1,5 +1,5 @@
-import PropTypes from 'prop-types'; 
-import './ImageLinkForm.css';
+import PropTypes from "prop-types";
+import "./ImageLinkForm.css";
 
 const ImageLinkForm = ({ onInputChange, onButtonSubmit, inputValue }) => {
 	return (
@@ -19,8 +19,7 @@ const ImageLinkForm = ({ onInputChange, onButtonSubmit, inputValue }) => {
 					<button
 						className="w-30 grow f4 link ph3 pv2 dib white bg-light-purple br--right"
 						type="button"
-						onClick={onButtonSubmit}
-					>
+						onClick={onButtonSubmit}>
 						Detect
 					</button>
 				</div>
@@ -29,17 +28,16 @@ const ImageLinkForm = ({ onInputChange, onButtonSubmit, inputValue }) => {
 	);
 };
 
-
 ImageLinkForm.propTypes = {
-	onInputChange: PropTypes.func.isRequired, 
-	onButtonSubmit: PropTypes.func.isRequired, 
-	inputValue: PropTypes.string.isRequired, 
+	onInputChange: PropTypes.func.isRequired,
+	onButtonSubmit: PropTypes.func.isRequired,
+	inputValue: PropTypes.string.isRequired,
 };
 
 ImageLinkForm.defaultProps = {
 	onInputChange: () => {},
 	onButtonSubmit: () => {},
-	inputValue: '',
+	inputValue: "",
 };
 
 export default ImageLinkForm;

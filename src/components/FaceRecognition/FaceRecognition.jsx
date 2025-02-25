@@ -4,7 +4,7 @@ import "./FaceRecognition.css";
 const FaceRecognition = ({ imageUrl, box }) => {
   if (!imageUrl) return null;
 
-  console.log("Box data:", box); 
+  //console.log("Box data:", box); 
 
   return (
     <div className="center displayImage">
