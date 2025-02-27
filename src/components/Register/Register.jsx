@@ -116,7 +116,7 @@ const Register = ({ onRouteChange, loadUser }) => {
                   </div>
                </fieldset>
                <div className="">
-                  <button type="submit" className="b ph3 pv2 ba b--black bg-transparent grow pointer f6 dib">
+                  <button type="submit" className="b ph3 pv2 ba b--black bg-transparent grow pointer f6 dib br3">
                      Register
                   </button>
                </div>
