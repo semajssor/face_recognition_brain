@@ -33,6 +33,7 @@ database
 	});
 
 const app = express();
+const PORT = process.env.PORT || 3000;
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -66,6 +67,6 @@ app.put("/image", (req, res) => {
 
 app.post("/api/clarifai", handleClarifaiApiCall);
 
-app.listen(3000, () => {
-	console.log("Server is running on port 3000");
+app.listen(PORT, () => {
+	console.log(`Server is running on port ${PORT}`);
 });
