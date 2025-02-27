@@ -8,6 +8,8 @@ import bcrypt from "bcrypt";
 import cors from "cors";
 import fetch from "node-fetch";
 import knex from "knex";
+import handleSignin from "./controllers/signin.js";
+import handleRegister from "./controllers/register.js";
 
 const database = knex({
 	client: "pg",
@@ -32,8 +34,6 @@ const app = express();
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const saltRounds = 10;
-
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(express.static(path.join(__dirname, "public")));
@@ -54,61 +54,12 @@ app.get("/", async (req, res) => {
 	}
 });
 
-app.post("/signin", async (req, res) => {
-	const { email, password } = req.body;
-
-	try {
-		const loginEntry = await database("login").select("hash", "email").where({ email }).first();
-
-		if (!loginEntry) {
-			return res.status(400).json("error logging in");
-		}
-
-		const isValid = await bcrypt.compare(password, loginEntry.hash);
-
-		if (isValid) {
-			const user = await database("users").select("*").where({ email }).first();
-			res.json(user);
-		} else {
-			res.status(400).json("error logging in");
-		}
-	} catch (err) {
-		console.error("Signin error:", err);
-		res.status(500).json("server error");
-	}
+app.post("/signin", (req, res) => {
+	handleSignin(req, res, database, bcrypt);
 });
 
-app.post("/register", async (req, res) => {
-	const { email, fname, lname, password } = req.body;
-
-	if (!email || !fname || !lname || !password) {
-		return res.status(400).json("Missing registration fields");
-	}
-
-	try {
-		const existingUser = await database("users").where({ email }).first();
-
-		if (existingUser) {
-			return res.status(400).json("Email already registered");
-		}
-
-		const hash = await bcrypt.hash(password, saltRounds);
-
-		const newUser = await database.transaction(async (trx) => {
-			const insertedUser = await trx("users")
-				.returning("*")
-				.insert({ fname, lname, email, joined: new Date() });
-
-			await trx("login").insert({ email, hash });
-
-			return insertedUser[0];
-		});
-
-		res.json(newUser);
-	} catch (err) {
-		console.error("Registration error:", err);
-		res.status(500).json("Error registering user");
-	}
+app.post("/register", (req, res) => {
+	handleRegister(req, res, database, bcrypt);
 });
 
 app.get("/profile/:id", async (req, res) => {

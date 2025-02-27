@@ -54,7 +54,7 @@ const Register = ({ onRouteChange, loadUser }) => {
          const data = await response.json();
    
          if (response.ok) {
-            console.log("User registered:", data);
+            // console.log("User registered:", data);
    
             if (data.id) {
                loadUser(data);
