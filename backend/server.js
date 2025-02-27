@@ -65,7 +65,6 @@ app.put("/image", (req, res) => {
 	handleImage(req, res, database);
 });
 
-// Proxy endpoint for Clarifai API
 app.post("/api/clarifai", handleClarifaiApiCall);
 
 app.listen(3000, () => {
