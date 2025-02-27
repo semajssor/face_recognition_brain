@@ -18,7 +18,8 @@ const App = () => {
 	const [isSignedIn, setIsSignedIn] = useState(false);
 	const [user, setUser] = useState({
 		id: "",
-		name: "",
+		fname: "",
+		lname: "",
 		email: "",
 		entries: 0,
 		joined: "",
@@ -27,7 +28,8 @@ const App = () => {
 	const loadUser = (data) => {
 		setUser({
 			id: data.id,
-			name: data.name,
+			fname: data.fname,
+			lname: data.lname,
 			email: data.email,
 			entries: data.entries,
 			joined: data.joined,
@@ -37,6 +39,26 @@ const App = () => {
 	const onInputChange = (event) => {
 		setInput(event.target.value);
 	};
+
+	const updateEntries = () => {
+		if (!user.id) return; 
+  
+		fetch("http://localhost:3000/image", {
+			 method: "PUT",
+			 headers: { "Content-Type": "application/json" },
+			 body: JSON.stringify({ id: user.id }), 
+		})
+		.then(response => response.json())
+		.then(count => {
+			 if (!isNaN(count)) {
+				  setUser(prevUser => ({
+						...prevUser,
+						entries: count, 
+				  }));
+			 }
+		})
+		.catch(console.log);
+  };
 
 	const calculateFaceLocation = (data) => {
 		const regions = data.outputs[0]?.data?.regions;
@@ -83,6 +105,7 @@ const App = () => {
 
 				if (data.outputs) {
 					displayFaceBox(calculateFaceLocation(data));
+					updateEntries();
 				}
 
 				setInput("");
@@ -95,7 +118,8 @@ const App = () => {
 			setIsSignedIn(false);
 			setUser({
 				id: "",
-				name: "",
+				fname: "",
+				lname: "",
 				email: "",
 				entries: 0,
 				joined: "",
@@ -106,13 +130,15 @@ const App = () => {
 		setRoute(route);
 	};
 
+	
+
 	return (
 		<div className="App">
 			<ParticlesBg type="cobweb" bg={true} color="#efefef" className="particules" />
 			<Navigation onRouteChange={onRouteChange} isSignIn={isSignedIn} />
 			{route === "home" ? (
 				<div className="mt5">
-					<Rank name={user.name} entries={user.entries} />
+					<Rank fname={user.fname} entries={user.entries} />
 					<ImageLinkForm
 						onInputChange={onInputChange}
 						onButtonSubmit={onButtonSubmit}
@@ -123,7 +149,7 @@ const App = () => {
 			) : route === "signin" ? (
 				<Signin loadUser={loadUser} onRouteChange={onRouteChange} />
 			) : (
-				<Register onRouteChange={onRouteChange} />
+				<Register loadUser={loadUser} onRouteChange={onRouteChange} />
 			)}
 		</div>
 	);
