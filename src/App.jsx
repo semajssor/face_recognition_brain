@@ -3,12 +3,12 @@ import "./App.css";
 import "./index.css";
 import "tachyons";
 import ParticlesBg from "particles-bg";
-import Navigation from "./components/Navigation/navigation";
-import ImageLinkForm from "./components/ImageLinkForm/ImageLinkForm";
-import Rank from "./components/Rank/Rank";
-import FaceRecognition from "./components/FaceRecognition/FaceRecognition";
-import Signin from "./components/Signin/Signin";
-import Register from "./components/Register/Register";
+import Navigation from "./components/Navigation/Navigation.jsx";
+import ImageLinkForm from "./components/ImageLinkForm/ImageLinkForm.jsx";
+import Rank from "./components/Rank/Rank.jsx";
+import FaceRecognition from "./components/FaceRecognition/FaceRecognition.jsx";
+import Signin from "./components/Signin/Signin.jsx";
+import Register from "./components/Register/Register.jsx";
 
 const App = () => {
 	const [input, setInput] = useState("");
