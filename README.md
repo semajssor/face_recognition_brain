@@ -1,401 +1,147 @@
-<p align="center">
-    <img src="https://raw.githubusercontent.com/PKief/vscode-material-icon-theme/ec559a9f6bfd399b82bb44393651661b08aaf7ba/icons/folder-markdown-open.svg" align="center" width="30%">
+<div align="left">
+    <img src="./frontend/src/assets/brain-icon.svg" width="40%" align="left" style="margin-right: 15px"/>
+    <div style="display: inline-block;">
+        <h2 style="display: inline-block; vertical-align: middle; margin-top: 0;">FACE_RECOGNITION_BRAIN</h2>
+        <p>
+	<em>AI-powered face detection application</em>
 </p>
-<p align="center"><h1 align="center">FACE RECOGNITION BRAIN</h1></p>
-<p align="center">
-	<em><code>❯ REPLACE-ME</code></em>
+        <p>
+	<img src="https://img.shields.io/github/license/semajssor/face_recognition_brain?style=plastic&logo=opensourceinitiative&logoColor=white&color=blueviolet" alt="license">
+	<img src="https://img.shields.io/github/last-commit/semajssor/face_recognition_brain?style=plastic&logo=git&logoColor=white&color=blueviolet" alt="last-commit">
+	<img src="https://img.shields.io/github/languages/top/semajssor/face_recognition_brain?style=plastic&color=blueviolet" alt="repo-top-language">
+	<img src="https://img.shields.io/github/languages/count/semajssor/face_recognition_brain?style=plastic&color=blueviolet" alt="repo-language-count">
 </p>
-<p align="center">
-	<img src="https://img.shields.io/github/license/semajssor/face_recognition_brain?style=default&logo=opensourceinitiative&logoColor=white&color=0080ff" alt="license">
-	<img src="https://img.shields.io/github/last-commit/semajssor/face_recognition_brain?style=default&logo=git&logoColor=white&color=0080ff" alt="last-commit">
-	<img src="https://img.shields.io/github/languages/top/semajssor/face_recognition_brain?style=default&color=0080ff" alt="repo-top-language">
-	<img src="https://img.shields.io/github/languages/count/semajssor/face_recognition_brain?style=default&color=0080ff" alt="repo-language-count">
+        <p>Built with:</p>
+        <p>
+	<img src="https://img.shields.io/badge/npm-CB3837.svg?style=plastic&logo=npm&logoColor=white" alt="npm">
+	<img src="https://img.shields.io/badge/HTML5-E34F26.svg?style=plastic&logo=HTML5&logoColor=white" alt="HTML5">
+	<img src="https://img.shields.io/badge/JavaScript-F7DF1E.svg?style=plastic&logo=JavaScript&logoColor=black" alt="JavaScript">
+   <img src="https://img.shields.io/badge/PostgreSQL-316192.svg?style=plastic&logo=postgresql&logoColor=white" alt="PostgreSQL">
 </p>
-<p align="center"><!-- default option, no dependency badges. -->
-</p>
-<p align="center">
-	<!-- default option, no dependency badges. -->
-</p>
-<br>
+    </div>
+</div>
+<br clear="left"/>
 
-##  Table of Contents
+## 🔗 Table of Contents
 
-- [ Overview](#-overview)
-- [ Features](#-features)
-- [ Project Structure](#-project-structure)
-  - [ Project Index](#-project-index)
-- [ Getting Started](#-getting-started)
-  - [ Prerequisites](#-prerequisites)
-  - [ Installation](#-installation)
-  - [ Usage](#-usage)
-  - [ Testing](#-testing)
-- [ Project Roadmap](#-project-roadmap)
-- [ Contributing](#-contributing)
-- [ License](#-license)
-- [ Acknowledgments](#-acknowledgments)
+1. [📍 Overview](#-overview)
+2. [👾 Features](#-features)
+3. [📁 Project Structure](#-project-structure)
+4. [🚀 Getting Started](#-getting-started)
+   - [☑️ Prerequisites](#-prerequisites)
+   - [⚙️ Installation](#-installation)
+   - [🤖 Usage](#-usage)
+   - [🧑🏻‍💻 Deployment](#-deployment)
+5. [🎗 License](#-license)
+6. [🙌 Acknowledgments](#-acknowledgments)
 
 ---
 
-##  Overview
+## 📍 Overview
 
-<code>❯ REPLACE-ME</code>
-
----
-
-##  Features
-
-<code>❯ REPLACE-ME</code>
+**Face Recognition Brain** is a web application that utilizes Clarifai's AI API for face detection. Built with a Vite/React frontend and a Node.js backend, users can upload images and receive real-time face detection results.
 
 ---
 
-##  Project Structure
+## 👾 Features
+
+- **Face Detection**: Detect faces in uploaded images using Clarifai's AI API.
+- **User Authentication**: Register and sign in to track your usage.
+- **Responsive Design**: A clean and intuitive user interface built with Vite + React.
+- **Database:** PostgreSQL
+
+---
+
+## 📁 Project Structure
 
 ```sh
 └── face_recognition_brain/
-    ├── README.md
-    ├── backend
-    │   ├── controllers
-    │   ├── package-lock.json
-    │   ├── package.json
-    │   └── server.js
-    ├── eslint.config.js
-    └── frontend
-        ├── .gitignore
-        ├── index.html
-        ├── package-lock.json
-        ├── package.json
-        ├── src
-        └── vite.config.js
+    ├── README.md               # Project documentation
+    ├── backend/                # Node.js server and API logic
+    │   ├── controllers/        # Route handlers for API endpoints
+    │   ├── package-lock.json   # Lockfile for backend dependencies
+    │   ├── package.json        # Backend dependencies and scripts
+    │   └── server.js           # Entry point for the backend server
+    ├── eslint.config.js        # ESLint configuration for code linting
+    └── frontend/               # React-based frontend application
+        ├── .gitignore          # Files to ignore in Git
+        ├── index.html          # Main HTML file for the frontend
+        ├── package-lock.json   # Lockfile for frontend dependencies
+        ├── package.json        # Frontend dependencies and scripts
+        ├── src/                # React components and application logic
+        └── vite.config.js      # Vite configuration for the frontend
 ```
-
-
-###  Project Index
-<details open>
-	<summary><b><code>FACE_RECOGNITION_BRAIN/</code></b></summary>
-	<details> <!-- __root__ Submodule -->
-		<summary><b>__root__</b></summary>
-		<blockquote>
-			<table>
-			<tr>
-				<td><b><a href='https://github.com/semajssor/face_recognition_brain/blob/master/eslint.config.js'>eslint.config.js</a></b></td>
-				<td><code>❯ REPLACE-ME</code></td>
-			</tr>
-			</table>
-		</blockquote>
-	</details>
-	<details> <!-- frontend Submodule -->
-		<summary><b>frontend</b></summary>
-		<blockquote>
-			<table>
-			<tr>
-				<td><b><a href='https://github.com/semajssor/face_recognition_brain/blob/master/frontend/index.html'>index.html</a></b></td>
-				<td><code>❯ REPLACE-ME</code></td>
-			</tr>
-			<tr>
-				<td><b><a href='https://github.com/semajssor/face_recognition_brain/blob/master/frontend/vite.config.js'>vite.config.js</a></b></td>
-				<td><code>❯ REPLACE-ME</code></td>
-			</tr>
-			<tr>
-				<td><b><a href='https://github.com/semajssor/face_recognition_brain/blob/master/frontend/package-lock.json'>package-lock.json</a></b></td>
-				<td><code>❯ REPLACE-ME</code></td>
-			</tr>
-			<tr>
-				<td><b><a href='https://github.com/semajssor/face_recognition_brain/blob/master/frontend/package.json'>package.json</a></b></td>
-				<td><code>❯ REPLACE-ME</code></td>
-			</tr>
-			</table>
-			<details>
-				<summary><b>src</b></summary>
-				<blockquote>
-					<table>
-					<tr>
-						<td><b><a href='https://github.com/semajssor/face_recognition_brain/blob/master/frontend/src/App.css'>App.css</a></b></td>
-						<td><code>❯ REPLACE-ME</code></td>
-					</tr>
-					<tr>
-						<td><b><a href='https://github.com/semajssor/face_recognition_brain/blob/master/frontend/src/index.css'>index.css</a></b></td>
-						<td><code>❯ REPLACE-ME</code></td>
-					</tr>
-					<tr>
-						<td><b><a href='https://github.com/semajssor/face_recognition_brain/blob/master/frontend/src/main.jsx'>main.jsx</a></b></td>
-						<td><code>❯ REPLACE-ME</code></td>
-					</tr>
-					<tr>
-						<td><b><a href='https://github.com/semajssor/face_recognition_brain/blob/master/frontend/src/App.jsx'>App.jsx</a></b></td>
-						<td><code>❯ REPLACE-ME</code></td>
-					</tr>
-					</table>
-					<details>
-						<summary><b>components</b></summary>
-						<blockquote>
-							<details>
-								<summary><b>FaceRecognition</b></summary>
-								<blockquote>
-									<table>
-									<tr>
-										<td><b><a href='https://github.com/semajssor/face_recognition_brain/blob/master/frontend/src/components/FaceRecognition/FaceRecognition.css'>FaceRecognition.css</a></b></td>
-										<td><code>❯ REPLACE-ME</code></td>
-									</tr>
-									<tr>
-										<td><b><a href='https://github.com/semajssor/face_recognition_brain/blob/master/frontend/src/components/FaceRecognition/FaceRecognition.jsx'>FaceRecognition.jsx</a></b></td>
-										<td><code>❯ REPLACE-ME</code></td>
-									</tr>
-									</table>
-								</blockquote>
-							</details>
-							<details>
-								<summary><b>Navigation</b></summary>
-								<blockquote>
-									<table>
-									<tr>
-										<td><b><a href='https://github.com/semajssor/face_recognition_brain/blob/master/frontend/src/components/Navigation/Navigation.jsx'>Navigation.jsx</a></b></td>
-										<td><code>❯ REPLACE-ME</code></td>
-									</tr>
-									</table>
-								</blockquote>
-							</details>
-							<details>
-								<summary><b>ImageLinkForm</b></summary>
-								<blockquote>
-									<table>
-									<tr>
-										<td><b><a href='https://github.com/semajssor/face_recognition_brain/blob/master/frontend/src/components/ImageLinkForm/ImageLinkForm.css'>ImageLinkForm.css</a></b></td>
-										<td><code>❯ REPLACE-ME</code></td>
-									</tr>
-									<tr>
-										<td><b><a href='https://github.com/semajssor/face_recognition_brain/blob/master/frontend/src/components/ImageLinkForm/ImageLinkForm.jsx'>ImageLinkForm.jsx</a></b></td>
-										<td><code>❯ REPLACE-ME</code></td>
-									</tr>
-									</table>
-								</blockquote>
-							</details>
-							<details>
-								<summary><b>Register</b></summary>
-								<blockquote>
-									<table>
-									<tr>
-										<td><b><a href='https://github.com/semajssor/face_recognition_brain/blob/master/frontend/src/components/Register/Register.jsx'>Register.jsx</a></b></td>
-										<td><code>❯ REPLACE-ME</code></td>
-									</tr>
-									</table>
-								</blockquote>
-							</details>
-							<details>
-								<summary><b>Signin</b></summary>
-								<blockquote>
-									<table>
-									<tr>
-										<td><b><a href='https://github.com/semajssor/face_recognition_brain/blob/master/frontend/src/components/Signin/Signin.jsx'>Signin.jsx</a></b></td>
-										<td><code>❯ REPLACE-ME</code></td>
-									</tr>
-									<tr>
-										<td><b><a href='https://github.com/semajssor/face_recognition_brain/blob/master/frontend/src/components/Signin/Signin.css'>Signin.css</a></b></td>
-										<td><code>❯ REPLACE-ME</code></td>
-									</tr>
-									</table>
-								</blockquote>
-							</details>
-							<details>
-								<summary><b>Logo</b></summary>
-								<blockquote>
-									<table>
-									<tr>
-										<td><b><a href='https://github.com/semajssor/face_recognition_brain/blob/master/frontend/src/components/Logo/Logo.jsx'>Logo.jsx</a></b></td>
-										<td><code>❯ REPLACE-ME</code></td>
-									</tr>
-									<tr>
-										<td><b><a href='https://github.com/semajssor/face_recognition_brain/blob/master/frontend/src/components/Logo/Logo.css'>Logo.css</a></b></td>
-										<td><code>❯ REPLACE-ME</code></td>
-									</tr>
-									</table>
-								</blockquote>
-							</details>
-							<details>
-								<summary><b>Rank</b></summary>
-								<blockquote>
-									<table>
-									<tr>
-										<td><b><a href='https://github.com/semajssor/face_recognition_brain/blob/master/frontend/src/components/Rank/Rank.jsx'>Rank.jsx</a></b></td>
-										<td><code>❯ REPLACE-ME</code></td>
-									</tr>
-									</table>
-								</blockquote>
-							</details>
-						</blockquote>
-					</details>
-				</blockquote>
-			</details>
-		</blockquote>
-	</details>
-	<details> <!-- backend Submodule -->
-		<summary><b>backend</b></summary>
-		<blockquote>
-			<table>
-			<tr>
-				<td><b><a href='https://github.com/semajssor/face_recognition_brain/blob/master/backend/server.js'>server.js</a></b></td>
-				<td><code>❯ REPLACE-ME</code></td>
-			</tr>
-			<tr>
-				<td><b><a href='https://github.com/semajssor/face_recognition_brain/blob/master/backend/package-lock.json'>package-lock.json</a></b></td>
-				<td><code>❯ REPLACE-ME</code></td>
-			</tr>
-			<tr>
-				<td><b><a href='https://github.com/semajssor/face_recognition_brain/blob/master/backend/package.json'>package.json</a></b></td>
-				<td><code>❯ REPLACE-ME</code></td>
-			</tr>
-			</table>
-			<details>
-				<summary><b>controllers</b></summary>
-				<blockquote>
-					<table>
-					<tr>
-						<td><b><a href='https://github.com/semajssor/face_recognition_brain/blob/master/backend/controllers/profile.js'>profile.js</a></b></td>
-						<td><code>❯ REPLACE-ME</code></td>
-					</tr>
-					<tr>
-						<td><b><a href='https://github.com/semajssor/face_recognition_brain/blob/master/backend/controllers/register.js'>register.js</a></b></td>
-						<td><code>❯ REPLACE-ME</code></td>
-					</tr>
-					<tr>
-						<td><b><a href='https://github.com/semajssor/face_recognition_brain/blob/master/backend/controllers/signin.js'>signin.js</a></b></td>
-						<td><code>❯ REPLACE-ME</code></td>
-					</tr>
-					<tr>
-						<td><b><a href='https://github.com/semajssor/face_recognition_brain/blob/master/backend/controllers/home.js'>home.js</a></b></td>
-						<td><code>❯ REPLACE-ME</code></td>
-					</tr>
-					<tr>
-						<td><b><a href='https://github.com/semajssor/face_recognition_brain/blob/master/backend/controllers/clarifai.js'>clarifai.js</a></b></td>
-						<td><code>❯ REPLACE-ME</code></td>
-					</tr>
-					<tr>
-						<td><b><a href='https://github.com/semajssor/face_recognition_brain/blob/master/backend/controllers/image.js'>image.js</a></b></td>
-						<td><code>❯ REPLACE-ME</code></td>
-					</tr>
-					</table>
-				</blockquote>
-			</details>
-		</blockquote>
-	</details>
-</details>
-
----
-##  Getting Started
-
-###  Prerequisites
-
-Before getting started with face_recognition_brain, ensure your runtime environment meets the following requirements:
-
-- **Programming Language:** JavaScript
-- **Package Manager:** Npm
-
-
-###  Installation
-
-Install face_recognition_brain using one of the following methods:
-
-**Build from source:**
-
-1. Clone the face_recognition_brain repository:
-```sh
-❯ git clone https://github.com/semajssor/face_recognition_brain
-```
-
-2. Navigate to the project directory:
-```sh
-❯ cd face_recognition_brain
-```
-
-3. Install the project dependencies:
-
-
-**Using `npm`** &nbsp; [<img align="center" src="https://img.shields.io/badge/npm-CB3837.svg?style={badge_style}&logo=npm&logoColor=white" />](https://www.npmjs.com/)
-
-```sh
-❯ npm install
-```
-
-
-
-
-###  Usage
-Run face_recognition_brain using the following command:
-**Using `npm`** &nbsp; [<img align="center" src="https://img.shields.io/badge/npm-CB3837.svg?style={badge_style}&logo=npm&logoColor=white" />](https://www.npmjs.com/)
-
-```sh
-❯ npm start
-```
-
-
-###  Testing
-Run the test suite using the following command:
-**Using `npm`** &nbsp; [<img align="center" src="https://img.shields.io/badge/npm-CB3837.svg?style={badge_style}&logo=npm&logoColor=white" />](https://www.npmjs.com/)
-
-```sh
-❯ npm test
-```
-
-
----
-##  Project Roadmap
-
-- [X] **`Task 1`**: <strike>Implement feature one.</strike>
-- [ ] **`Task 2`**: Implement feature two.
-- [ ] **`Task 3`**: Implement feature three.
 
 ---
 
-##  Contributing
+## 🚀 Getting Started
 
-- **💬 [Join the Discussions](https://github.com/semajssor/face_recognition_brain/discussions)**: Share your insights, provide feedback, or ask questions.
-- **🐛 [Report Issues](https://github.com/semajssor/face_recognition_brain/issues)**: Submit bugs found or log feature requests for the `face_recognition_brain` project.
-- **💡 [Submit Pull Requests](https://github.com/semajssor/face_recognition_brain/blob/main/CONTRIBUTING.md)**: Review open PRs, and submit your own PRs.
+### ☑️ Prerequisites
+- Node.js (>=16)
+- PostgreSQL installed and running
 
-<details closed>
-<summary>Contributing Guidelines</summary>
+### ⚙️ Installation
 
-1. **Fork the Repository**: Start by forking the project repository to your github account.
-2. **Clone Locally**: Clone the forked repository to your local machine using a git client.
+1. **Clone the repository:**
    ```sh
-   git clone https://github.com/semajssor/face_recognition_brain
+   git clone https://github.com/your-repo.git
+   cd your-repo
    ```
-3. **Create a New Branch**: Always work on a new branch, giving it a descriptive name.
+2. **Install dependencies:**
    ```sh
-   git checkout -b new-feature-x
+   npm install
    ```
-4. **Make Your Changes**: Develop and test your changes locally.
-5. **Commit Your Changes**: Commit with a clear message describing your updates.
+3. **Setup environment variables:**
+   Create a `.env` file in the root directory and add the following:
    ```sh
-   git commit -m 'Implemented new feature x.'
+   PORT=5000
+   DATABASE_URL=postgres://user:password@localhost:5432/dbname
+   CLARIFAI_API_KEY=your_clarifai_api_key
    ```
-6. **Push to github**: Push the changes to your forked repository.
-   ```sh
-   git push origin new-feature-x
-   ```
-7. **Submit a Pull Request**: Create a PR against the original project repository. Clearly describe the changes and their motivations.
-8. **Review**: Once your PR is reviewed and approved, it will be merged into the main branch. Congratulations on your contribution!
-</details>
+   Replace `user`, `password`, `dbname`, and `your_clarifai_api_key` with your actual credentials.
 
-<details closed>
-<summary>Contributor Graph</summary>
-<br>
-<p align="left">
-   <a href="https://github.com{/semajssor/face_recognition_brain/}graphs/contributors">
-      <img src="https://contrib.rocks/image?repo=semajssor/face_recognition_brain">
-   </a>
-</p>
-</details>
+4. **Start PostgreSQL database:**
+   - Ensure PostgreSQL is running.
+   - Run migrations if needed.
+
+5. **Run the backend:**
+   ```sh
+   npm run server
+   ```
+6. **Run the frontend:**
+   ```sh
+   npm run dev
+   ```
+
+### 🤖 Usage
+
+1. Start the backend server:
+   ```sh
+   cd backend
+   node server.js
+   ```
+2. Start the frontend:
+   ```sh
+   cd frontend
+   npm run dev
+   ```
+3. Open the browser and go to `http://localhost:3000`
+
+### 🧑🏻‍💻 Deployment
+
+- To deploy, ensure all environment variables are set on your hosting platform.
+- Use `npm run build` for production frontend builds.
+- Use a service like Render, Vercel, or Heroku for deployment. I used [render.com](https://render.com/) for my database and backend, and [vercel.com](https://vercel.com/)
 
 ---
 
-##  License
+## 🎗 License
 
-This project is protected under the [SELECT-A-LICENSE](https://choosealicense.com/licenses) License. For more details, refer to the [LICENSE](https://choosealicense.com/licenses/) file.
-
----
-
-##  Acknowledgments
-
-- List any resources, contributors, inspiration, etc. here.
+This project is licensed under the MIT License. See [LICENSE](https://choosealicense.com/licenses/) for details.
 
 ---
+
+## 🙌 Acknowledgments
+
+- Inspired by the Zero to Mastery course on full-stack development.
+- Built with ❤️ by **semajssor**.
