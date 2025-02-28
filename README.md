@@ -6,7 +6,7 @@
 	<em>AI-powered face detection application</em>
 </p>
         <p>
-	<img src="https://img.shields.io/github/license/semajssor/face_recognition_brain?style=plastic&logo=opensourceinitiative&logoColor=white&color=blueviolet&label=MIT" alt="license">
+	<img src="https://img.shields.io/badge/License-MIT-blueviolet?style=plastic&logo=opensourceinitiative&logoColor=white" alt="License MIT">
 	<img src="https://img.shields.io/github/last-commit/semajssor/face_recognition_brain?style=plastic&logo=git&logoColor=white&color=blueviolet" alt="last-commit">
 	<img src="https://img.shields.io/github/languages/top/semajssor/face_recognition_brain?style=plastic&color=blueviolet" alt="repo-top-language">
 	<img src="https://img.shields.io/github/languages/count/semajssor/face_recognition_brain?style=plastic&color=blueviolet" alt="repo-language-count">
