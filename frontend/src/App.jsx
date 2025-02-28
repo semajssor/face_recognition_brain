@@ -43,7 +43,7 @@ const App = () => {
 	const updateEntries = () => {
 		if (!user.id) return; 
   
-		fetch("http://localhost:3000/image", {
+		fetch("https://face-recognition-brain-5qgr.onrender.com/image", {
 			 method: "PUT",
 			 headers: { "Content-Type": "application/json" },
 			 body: JSON.stringify({ id: user.id }), 
@@ -89,7 +89,7 @@ const App = () => {
 		setImageUrl(input);
 
 		// Make the API request
-		fetch("http://localhost:3000/api/clarifai", {
+		fetch("https://face-recognition-brain-5qgr.onrender.com/api/clarifai", {
 			method: "POST",
 			headers: {
 				"Content-Type": "application/json",

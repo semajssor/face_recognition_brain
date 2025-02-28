@@ -45,7 +45,7 @@ const Register = ({ onRouteChange, loadUser }) => {
       }
    
       try {
-         const response = await fetch("http://localhost:3000/register", {
+         const response = await fetch("https://face-recognition-brain-5qgr.onrender.com/register", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ fname, lname, email, password }),
