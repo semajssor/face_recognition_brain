@@ -1,5 +1,5 @@
 <div align="left">
-    <img src="./frontend/src/assets/brain-icon.svg" width="20%" align="left" style="margin-right: 15px"/>
+    <!-- <img src="./frontend/src/assets/brain-icon.svg" width="20%" align="left" style="margin-right: 15px"/> -->
     <div style="display: inline-block;">
         <h2 style="display: inline-block; vertical-align: middle; margin-top: 0;">FACE RECOGNITION BRAIN</h2>
         <p>
@@ -14,9 +14,12 @@
         <p>Built with:</p>
         <p>
 	<img src="https://img.shields.io/badge/npm-CB3837.svg?style=plastic&logo=npm&logoColor=white" alt="npm">
-	<img src="https://img.shields.io/badge/HTML5-E34F26.svg?style=plastic&logo=HTML5&logoColor=white" alt="HTML5">
-	<img src="https://img.shields.io/badge/JavaScript-F7DF1E.svg?style=plastic&logo=JavaScript&logoColor=black" alt="JavaScript">
-   <img src="https://img.shields.io/badge/PostgreSQL-316192.svg?style=plastic&logo=postgresql&logoColor=white" alt="PostgreSQL">
+<img src="https://img.shields.io/badge/HTML5-E34F26.svg?style=plastic&logo=HTML5&logoColor=white" alt="HTML5">
+<img src="https://img.shields.io/badge/JavaScript-F7DF1E.svg?style=plastic&logo=JavaScript&logoColor=black" alt="JavaScript">
+<img src="https://img.shields.io/badge/PostgreSQL-316192.svg?style=plastic&logo=postgresql&logoColor=white" alt="PostgreSQL">
+<img src="https://img.shields.io/badge/React-61DAFB.svg?style=plastic&logo=react&logoColor=black" alt="React">
+<img src="https://img.shields.io/badge/Vite-646CFF.svg?style=plastic&logo=vite&logoColor=white" alt="Vite">
+   
 </p>
     </div>
 </div>
