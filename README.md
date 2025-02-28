@@ -1,7 +1,7 @@
 <div align="left">
-    <img src="./frontend/src/assets/brain-icon.svg" width="40%" align="left" style="margin-right: 15px"/>
+    <img src="./frontend/src/assets/brain-icon.svg" width="20%" align="left" style="margin-right: 15px"/>
     <div style="display: inline-block;">
-        <h2 style="display: inline-block; vertical-align: middle; margin-top: 0;">FACE_RECOGNITION_BRAIN</h2>
+        <h2 style="display: inline-block; vertical-align: middle; margin-top: 0;">FACE RECOGNITION BRAIN</h2>
         <p>
 	<em>AI-powered face detection application</em>
 </p>
