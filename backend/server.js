@@ -14,23 +14,25 @@ import handleProfileGet from "./controllers/profile.js";
 import handleImage from "./controllers/image.js";
 import handleClarifaiApiCall from "./controllers/clarifai.js";
 
+// Update the database connection to include SSL/TLS
 const database = knex({
 	client: "pg",
 	connection: {
-		host: process.env.DATABASE_URL,
-		port: Number(process.env.DATABASE_PORT) || 5432,
-		user: process.env.DATABASE_USER,
-		password: process.env.DATABASE_PWD,
-		database: process.env.DATABASE_NAME,
+	  connectionString: process.env.DATABASE_URL,
+	  ssl: { rejectUnauthorized: false }, // Enable SSL/TLS
 	},
-});
+ });
 
+// Test the database connection
 database
-	.select("*")
-	.from("users")
-	.then((data) => {
-		console.log(data);
-	});
+  .select("*")
+  .from("users")
+  .then((data) => {
+    console.log(data);
+  })
+  .catch((err) => {
+    console.error("Error connecting to the database:", err);
+  });
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -42,31 +44,31 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(express.static(path.join(__dirname, "public")));
 app.use(
-	cors()
-	// Add this in cors when in production
-	// {origin: 'https://your-frontend-domain.com'}
+  cors()
+  // Add this in cors when in production
+  // {origin: 'https://your-frontend-domain.com'}
 );
 
 app.get("/", (req, res) => handleHome(req, res, database));
 
 app.post("/signin", (req, res) => {
-	handleSignin(req, res, database, bcrypt);
+  handleSignin(req, res, database, bcrypt);
 });
 
 app.post("/register", (req, res) => {
-	handleRegister(req, res, database, bcrypt);
+  handleRegister(req, res, database, bcrypt);
 });
 
 app.get("/profile/:id", (req, res) => {
-	handleProfileGet(req, res, database);
+  handleProfileGet(req, res, database);
 });
 
 app.put("/image", (req, res) => {
-	handleImage(req, res, database);
+  handleImage(req, res, database);
 });
 
 app.post("/api/clarifai", handleClarifaiApiCall);
 
 app.listen(PORT, () => {
-	console.log(`Server is running on port ${PORT}`);
+  console.log(`Server is running on port ${PORT}`);
 });

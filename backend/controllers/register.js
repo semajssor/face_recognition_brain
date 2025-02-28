@@ -21,7 +21,7 @@ const handleRegister = async (req, res, database, bcrypt) => {
                .insert({ fname, lname, email, joined: new Date() })
                .returning("*");
 
-            await trx("login").insert({ email, hash }).transacting(trx);
+            await trx("login").insert({ email, hash });
 
             return insertedUsers[0];
          } catch (error) {
