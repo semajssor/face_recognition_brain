@@ -3,24 +3,22 @@
         <h2 style="display: inline-block; vertical-align: middle; margin-top: 0;">FACE RECOGNITION BRAIN</h2>
         <p><em>AI-powered face detection application</em></p>
         
-        <!-- Project Info Badges -->
-        <p>
-            <img src="https://img.shields.io/badge/License-MIT-blueviolet?style=plastic&logo=opensourceinitiative&logoColor=white" alt="License MIT">
-            <img src="https://img.shields.io/github/last-commit/semajssor/face_recognition_brain?style=plastic&logo=git&logoColor=white&color=blueviolet" alt="last-commit">
-            <img src="https://img.shields.io/github/languages/top/semajssor/face_recognition_brain?style=plastic&color=blueviolet" alt="repo-top-language">
-            <img src="https://img.shields.io/github/languages/count/semajssor/face_recognition_brain?style=plastic&color=blueviolet" alt="repo-language-count">
-        </p>
-        
-        <!-- Built With Badges -->
+            <p>
+	<img src="https://img.shields.io/badge/License-MIT-blueviolet?style=plastic&logo=opensourceinitiative&logoColor=white" alt="License MIT">
+	<img src="https://img.shields.io/github/last-commit/semajssor/face_recognition_brain?style=plastic&logo=git&logoColor=white&color=blueviolet" alt="last-commit">
+	<img src="https://img.shields.io/github/languages/top/semajssor/face_recognition_brain?style=plastic&color=blueviolet" alt="repo-top-language">
+	<img src="https://img.shields.io/github/languages/count/semajssor/face_recognition_brain?style=plastic&color=blueviolet" alt="repo-language-count">
+</p>
         <p>Built with:</p>
         <p>
-            <img src="https://img.shields.io/badge/npm-CB3837.svg?style=plastic&logo=npm&logoColor=white" alt="npm">
-            <img src="https://img.shields.io/badge/HTML5-E34F26.svg?style=plastic&logo=HTML5&logoColor=white" alt="HTML5">
-            <img src="https://img.shields.io/badge/JavaScript-F7DF1E.svg?style=plastic&logo=JavaScript&logoColor=black" alt="JavaScript">
-            <img src="https://img.shields.io/badge/PostgreSQL-316192.svg?style=plastic&logo=postgresql&logoColor=white" alt="PostgreSQL">
-            <img src="https://img.shields.io/badge/React-61DAFB.svg?style=plastic&logo=react&logoColor=black" alt="React">
-            <img src="https://img.shields.io/badge/Vite-646CFF.svg?style=plastic&logo=vite&logoColor=white" alt="Vite">
-        </p>
+	<img src="https://img.shields.io/badge/npm-CB3837.svg?style=plastic&logo=npm&logoColor=white" alt="npm">
+<img src="https://img.shields.io/badge/HTML5-E34F26.svg?style=plastic&logo=HTML5&logoColor=white" alt="HTML5">
+<img src="https://img.shields.io/badge/JavaScript-F7DF1E.svg?style=plastic&logo=JavaScript&logoColor=black" alt="JavaScript">
+<img src="https://img.shields.io/badge/PostgreSQL-316192.svg?style=plastic&logo=postgresql&logoColor=white" alt="PostgreSQL">
+<img src="https://img.shields.io/badge/React-61DAFB.svg?style=plastic&logo=react&logoColor=black" alt="React">
+<img src="https://img.shields.io/badge/Vite-646CFF.svg?style=plastic&logo=vite&logoColor=white" alt="Vite">
+   
+</p>
     </div>
 </div>
 <br clear="left"/>
