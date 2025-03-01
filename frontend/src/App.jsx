@@ -124,6 +124,7 @@ const App = () => {
 				entries: 0,
 				joined: "",
 			});
+			setImageUrl(""); 
 		} else if (route === "home") {
 			setIsSignedIn(true);
 		}
