@@ -44,7 +44,7 @@
 
 **Face Recognition Brain** is a web application that utilizes Clarifai's AI API for face detection. Built with a Vite/React frontend and a Node.js backend, users can upload images and receive real-time face detection results.
 
-![Demo GIF or Screenshot](./Screen%20Recording%202025-03-01%20at%2000.53.36.gif)
+![Demo GIF or Screenshot](./demo.gif)
 
 ---
 
