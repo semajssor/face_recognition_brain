@@ -1,26 +1,26 @@
 <div align="left">
-    <!-- <img src="./frontend/src/assets/brain-icon.svg" width="20%" align="left" style="margin-right: 15px"/> -->
     <div style="display: inline-block;">
         <h2 style="display: inline-block; vertical-align: middle; margin-top: 0;">FACE RECOGNITION BRAIN</h2>
+        <p><em>AI-powered face detection application</em></p>
+        
+        <!-- Project Info Badges -->
         <p>
-	<em>AI-powered face detection application</em>
-</p>
-        <p>
-	<img src="https://img.shields.io/badge/License-MIT-blueviolet?style=plastic&logo=opensourceinitiative&logoColor=white" alt="License MIT">
-	<img src="https://img.shields.io/github/last-commit/semajssor/face_recognition_brain?style=plastic&logo=git&logoColor=white&color=blueviolet" alt="last-commit">
-	<img src="https://img.shields.io/github/languages/top/semajssor/face_recognition_brain?style=plastic&color=blueviolet" alt="repo-top-language">
-	<img src="https://img.shields.io/github/languages/count/semajssor/face_recognition_brain?style=plastic&color=blueviolet" alt="repo-language-count">
-</p>
+            <img src="https://img.shields.io/badge/License-MIT-blueviolet?style=plastic&logo=opensourceinitiative&logoColor=white" alt="License MIT">
+            <img src="https://img.shields.io/github/last-commit/semajssor/face_recognition_brain?style=plastic&logo=git&logoColor=white&color=blueviolet" alt="last-commit">
+            <img src="https://img.shields.io/github/languages/top/semajssor/face_recognition_brain?style=plastic&color=blueviolet" alt="repo-top-language">
+            <img src="https://img.shields.io/github/languages/count/semajssor/face_recognition_brain?style=plastic&color=blueviolet" alt="repo-language-count">
+        </p>
+        
+        <!-- Built With Badges -->
         <p>Built with:</p>
         <p>
-	<img src="https://img.shields.io/badge/npm-CB3837.svg?style=plastic&logo=npm&logoColor=white" alt="npm">
-<img src="https://img.shields.io/badge/HTML5-E34F26.svg?style=plastic&logo=HTML5&logoColor=white" alt="HTML5">
-<img src="https://img.shields.io/badge/JavaScript-F7DF1E.svg?style=plastic&logo=JavaScript&logoColor=black" alt="JavaScript">
-<img src="https://img.shields.io/badge/PostgreSQL-316192.svg?style=plastic&logo=postgresql&logoColor=white" alt="PostgreSQL">
-<img src="https://img.shields.io/badge/React-61DAFB.svg?style=plastic&logo=react&logoColor=black" alt="React">
-<img src="https://img.shields.io/badge/Vite-646CFF.svg?style=plastic&logo=vite&logoColor=white" alt="Vite">
-   
-</p>
+            <img src="https://img.shields.io/badge/npm-CB3837.svg?style=plastic&logo=npm&logoColor=white" alt="npm">
+            <img src="https://img.shields.io/badge/HTML5-E34F26.svg?style=plastic&logo=HTML5&logoColor=white" alt="HTML5">
+            <img src="https://img.shields.io/badge/JavaScript-F7DF1E.svg?style=plastic&logo=JavaScript&logoColor=black" alt="JavaScript">
+            <img src="https://img.shields.io/badge/PostgreSQL-316192.svg?style=plastic&logo=postgresql&logoColor=white" alt="PostgreSQL">
+            <img src="https://img.shields.io/badge/React-61DAFB.svg?style=plastic&logo=react&logoColor=black" alt="React">
+            <img src="https://img.shields.io/badge/Vite-646CFF.svg?style=plastic&logo=vite&logoColor=white" alt="Vite">
+        </p>
     </div>
 </div>
 <br clear="left"/>
@@ -44,14 +44,16 @@
 
 **Face Recognition Brain** is a web application that utilizes Clarifai's AI API for face detection. Built with a Vite/React frontend and a Node.js backend, users can upload images and receive real-time face detection results.
 
+![Demo GIF or Screenshot](./Screen%20Recording%202025-03-01%20at%2000.53.36.gif)
+
 ---
 
 ## 👾 Features
 
-- **Face Detection**: Detect faces in uploaded images using Clarifai's AI API.
-- **User Authentication**: Register and sign in to track your usage.
-- **Responsive Design**: A clean and intuitive user interface built with Vite + React.
-- **Database:** PostgreSQL
+- 🎯 **Face Detection**: Detect faces in uploaded images using Clarifai's AI API.
+- 🔐 **User Authentication**: Register and sign in to track your usage.
+- 🖥️ **Responsive Design**: A clean and intuitive user interface built with Vite + React.
+- 🗄️ **Database**: PostgreSQL for storing user data.
 
 ---
 

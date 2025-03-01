@@ -1,1 +1,45 @@
-.vercel
+# Ignore Node.js dependencies
+node_modules/
+
+# Ignore environment variables
+.env
+*.env*
+
+# Ignore build directories
+dist/
+build/
+
+# Ignore IDE and editor-specific files
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db
+
+# Ignore npm and yarn lockfiles (choose one depending on your package manager)
+# package-lock.json
+# yarn.lock
+
+# Ignore Vercel-specific files
+.vercel/
+
+# Ignore logs and debug files
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Ignore ESLint cache
+.eslintcache
+
+# Ignore Vite cache
+.cache/
+
+#Other
+.gif
