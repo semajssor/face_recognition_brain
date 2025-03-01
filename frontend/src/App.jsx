@@ -124,14 +124,12 @@ const App = () => {
 				entries: 0,
 				joined: "",
 			});
-			setImageUrl(""); 
+			setImageUrl("");
 		} else if (route === "home") {
 			setIsSignedIn(true);
 		}
 		setRoute(route);
 	};
-
-	
 
 	return (
 		<div className="App">
