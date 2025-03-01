@@ -3,7 +3,7 @@
         <h2 style="display: inline-block; vertical-align: middle; margin-top: 0;">FACE RECOGNITION BRAIN</h2>
         <p><em>AI-powered face detection application</em></p>
         
-            <p>
+   <p>
 	<img src="https://img.shields.io/badge/License-MIT-blueviolet?style=plastic&logo=opensourceinitiative&logoColor=white" alt="License MIT">
 	<img src="https://img.shields.io/github/last-commit/semajssor/face_recognition_brain?style=plastic&logo=git&logoColor=white&color=blueviolet" alt="last-commit">
 	<img src="https://img.shields.io/github/languages/top/semajssor/face_recognition_brain?style=plastic&color=blueviolet" alt="repo-top-language">
