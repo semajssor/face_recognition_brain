@@ -4,9 +4,9 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "start": "npx knex migrate:latest && node server.js", // MODIFIED LINE
+    "start": "npx knex migrate:latest && node server.js", 
     "start:dev": "nodemon server.js",
-    "migrate": "npx knex migrate:latest" // NEW LINE (optional, but good to have)
+    "migrate": "npx knex migrate:latest" 
   },
   "dependencies": {
     "bcrypt": "^6.0.0",
