@@ -9,7 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "lodash": "^4.17.21",
+    "lodash": "^4.17.23",
     "lucide-react": "^0.476.0",
     "particles-bg": "^2.5.5",
     "prop-types": "^15.8.1",
