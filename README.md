@@ -132,7 +132,7 @@
 
 - To deploy, ensure all environment variables are set on your hosting platform.
 - Use `npm run build` for production frontend builds.
-- Use a service like Render, Vercel, or Heroku for deployment. I used [render.com](https://render.com/) for my database and backend, and [vercel.com](https://vercel.com/)
+- Use a service like Render, neon.tech, Vercel, or Heroku for deployment. I used [neon.tech](https://neon.tech/) for my database, [vercel.com](https://vercel.com) for my backend, and [vercel.com](https://vercel.com/) for my frontend.
 
 ---
 

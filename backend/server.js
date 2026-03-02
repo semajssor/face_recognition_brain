@@ -43,8 +43,6 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname, "public")));
 app.use(
   cors()
-  // Add this in cors when in production
-  // {origin: 'https://your-frontend-domain.com'}
 );
 
 app.get("/", (req, res) => handleHome(req, res, database));
