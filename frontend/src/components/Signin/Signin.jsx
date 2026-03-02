@@ -25,7 +25,7 @@ class Signin extends Component {
 
 	onSubmitSignIn = (event) => {
 		event.preventDefault();
-		fetch("https://face-recognition-brain-5qgr.onrender.com/signin", {
+		fetch(`${import.meta.env.VITE_API_URL}/signin`, {
 			method: "post",
 			headers: { "Content-Type": "application/json" },
 			body: JSON.stringify({
@@ -36,13 +36,13 @@ class Signin extends Component {
 			.then((response) => response.json())
 			// .then((data) => {
 			// 	data === "success" ? this.props.onRouteChange("home") : null;
-		// });
-			.then(user => {
+			// });
+			.then((user) => {
 				if (user.id) {
 					this.props.loadUser(user);
 					this.props.onRouteChange("home");
-			}
-		})
+				}
+			});
 	};
 
 	togglePassword = () => {
