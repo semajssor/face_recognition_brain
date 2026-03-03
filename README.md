@@ -132,7 +132,9 @@
 
 - To deploy, ensure all environment variables are set on your hosting platform.
 - Use `npm run build` for production frontend builds.
-- Use a service like Render, neon.tech, Vercel, or Heroku for deployment. I used [neon.tech](https://neon.tech/) for my database, [vercel.com](https://vercel.com) for my backend, and [vercel.com](https://vercel.com/) for my frontend.
+- Use a service like Render, neon.tech, Vercel, or Heroku for deployment. I used [neon.tech](https://neon.tech/) for my database, [render.com](https://render.com) for my backend, and [vercel.com](https://vercel.com/) for my frontend.
+
+N.B.: As a downside of free tier with [render.com](https://render.com) there is a delay in the requests that could be up to 50 seconds or more. Just wait and everything should go through.
 
 ---
 
